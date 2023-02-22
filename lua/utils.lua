@@ -1,15 +1,3 @@
----------------------------
-----------  nerd ----------
----------------------------
-
--- carrega minha configurações padrão 
--- A ideia é carregar as cofigurações do nvim sem dependencia do plugins nesse ponto 
-require("settings")
-
--- carrego meus atalhos padrões
--- São carregado apenas atalhos do proprio nvim puro sem plugins
-require("bindkeys")
-
 -- Verifique se o usuário está executando o nerd em uma versão suportada do Neovim antes de tentar carregar qualquer coisa
 if vim.fn.has("nvim-0.7.0") ~= 1 then
     local message = table.concat({
@@ -23,6 +11,3 @@ if vim.fn.has("nvim-0.7.0") ~= 1 then
     }, "\n")
     vim.notify(message, vim.log.levels.ERROR)
 end
-
--- responsavel por carregar o gerenciador de plugins: atualmente usando Packer https://github.com/wbthomason/packer.nvim
-require("bootstrap")
