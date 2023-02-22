@@ -58,9 +58,6 @@ local options = {
       button("SPC f f", "  Find File  "),
       button("SPC f o", "  Recent File  "),
       button("SPC f w", "  Find Word  "),
-      button("SPC b m", "  Bookmarks  "),
-      button("SPC t h", "  Themes  "),
-      button("SPC e s", "  Settings"),
     },
     opts = {
       spacing = 1,

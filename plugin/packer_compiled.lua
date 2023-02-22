@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/plenary.nvim",
