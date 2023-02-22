@@ -1,7 +1,3 @@
----------------------------
-----------  nerd ----------
----------------------------
-
 -- carrega minha configurações padrão 
 -- A ideia é carregar as cofigurações do nvim sem dependencia do plugins nesse ponto 
 require("settings")
@@ -24,5 +20,4 @@ if vim.fn.has("nvim-0.7.0") ~= 1 then
     vim.notify(message, vim.log.levels.ERROR)
 end
 
--- responsavel por carregar o gerenciador de plugins: atualmente usando Packer https://github.com/wbthomason/packer.nvim
 require("bootstrap")
