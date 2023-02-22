@@ -1,37 +1,35 @@
 ---------------------------
 ---- Packer Bootstrap -----
 ---------------------------
-
--- Instale o gerenciador de pacotes Packer
-local execute = vim.api.nvim_command
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-	execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+local packer_path = vim.fn.stdpath("data") .. "/site/pack/packer/opt/packer.nvim"
+if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
+    vim.fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", packer_path })
 end
 
-require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
-	use 'navarasu/onedark.nvim'
-	use 'terrortylor/nvim-comment'
+vim.cmd.packadd('packer.nvim')
 
-	-- Verifique se todos os plugins foram instalados e, se necessário, instale-os
-	local plugins = packer_plugins
-	local plugins_loaded = true
-	for plugin_name, plugin_info in pairs(plugins) do
-		if not plugin_info.loaded then
-			plugins_loaded = false
-			break
-		end
+-- lista de plugins a serem verificados e instalados se necessário
+local plugins = {
+	{'terrortylor/nvim-comment'},
+}
+
+-- carrega o packer
+local packer = require('packer')
+packer.startup(function()
+	-- percorre a lista de plugins
+	for _, plugin in ipairs(plugins) do
+		local plugin_name = plugin[1]
+		-- define o plugin usando a função 'use' do Packer
+		use(plugin_name)
 	end
 
-	if not plugins_loaded then
-		packer.install()
-		packer.compile()
-	end
 end)
 
--- Instalação automática dos plugins
-if packer_plugins.loaded == false then
-	vim.cmd('autocmd User PackerComplete ++once echo "Plugins carregados com sucesso!"')
-	packer.sync()
+-- verifica se há plugins a serem instalados ou atualizados
+if packer_status ~= nil then
+	for plugin, status in pairs(packer_status) do
+		if status == "not installed" then
+			require('packer').sync()	
+		end
+	end
 end
