@@ -1,13 +1,13 @@
 local present, catppuccin = pcall(require, 'catppuccin')
 if not present then
-  return
+    return
 end
 
 catppuccin.setup({
     background = {
-        dark = "mocha",
+        dark = "frappe",
     },
-    flavour = "mocha",
+    flavour = "frappe",
     transparent_background = false
 })
 

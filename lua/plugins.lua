@@ -3,7 +3,6 @@ local plugins = {
     {"goolord/alpha-nvim"},
     {"nvim-telescope/telescope.nvim", tag = "0.1.1"},
     {"nvim-lua/plenary.nvim"}, -- dependencia do telescope
-    {"catppuccin/nvim"},
     {"nvim-treesitter/nvim-treesitter"},
     {"VonHeikemen/lsp-zero.nvim"},
     -- LSP Support
@@ -26,10 +25,14 @@ local plugins = {
     {"lewis6991/gitsigns.nvim"},
     {"andweeb/presence.nvim"},
     {"RRethy/vim-illuminate"},
-    {"nvim-neo-tree/neo-tree.nvim"},
-    {"nvim-lua/plenary.nvim"}, -- dependencia neo-tree
-    {"MunifTanjim/nui.nvim"}, -- dependencia neo-tree
+    {"romgrk/barbar.nvim"},
+    {"nvim-lualine/lualine.nvim"},
+    {"nvim-tree/nvim-tree.lua"},
     {"nvim-tree/nvim-web-devicons"}, -- dependencia neo-tree
+
+    -- themes
+    {"catppuccin/nvim"},
+    {"navarasu/onedark.nvim"},
 }
 
 return plugins

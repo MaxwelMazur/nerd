@@ -1,4 +1,4 @@
--- carrega minha configurações padrão 
+--nvim-neo-tree/neo-tree.nvim carrega minha configurações padrão 
 -- A ideia é carregar as cofigurações do nvim sem dependencia do plugins nesse ponto 
 require("settings")
 
