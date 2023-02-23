@@ -27,4 +27,4 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-vim.keymap.set("n", "<leader>pv", "<Cmd>NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>oe", "<Cmd>NvimTreeToggle<CR>")
