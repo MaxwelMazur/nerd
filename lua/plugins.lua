@@ -5,6 +5,7 @@ local plugins = {
     {"nvim-lua/plenary.nvim"}, -- dependencia do telescope
     {"nvim-treesitter/nvim-treesitter"},
     {"VonHeikemen/lsp-zero.nvim"},
+
     -- LSP Support
     {"neovim/nvim-lspconfig"}, -- dependencia lsp
     {"williamboman/mason.nvim"}, -- dependencia lsp
@@ -29,6 +30,8 @@ local plugins = {
     {"nvim-lualine/lualine.nvim"},
     {"nvim-tree/nvim-tree.lua"},
     {"nvim-tree/nvim-web-devicons"}, -- dependencia neo-tree
+    {"akinsho/toggleterm.nvim"},
+    {"lukas-reineke/indent-blankline.nvim"},
 
     -- themes
     {"catppuccin/nvim"},

@@ -1,7 +1,7 @@
 local lualine = require('lualine')
 
 local colors = {
-  -- bg       = '#202328',
+  bg       = '#292C3C',
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
@@ -84,7 +84,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return '󰌌'
   end,
   color = function()
     -- auto change color according to neovims mode
