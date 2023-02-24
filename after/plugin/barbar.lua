@@ -25,8 +25,8 @@ vim.api.nvim_create_autocmd({'BufWinLeave', 'BufWipeout'}, {
     end
 })
 
-vim.keymap.set('n', '<s-h>', '<Cmd>BufferPrevious<CR>')
-vim.keymap.set('n', '<s-l>', '<Cmd>BufferNext<CR>')
-vim.keymap.set('n', '<s-j>', '<Cmd>BufferClose<CR>')
+vim.keymap.set('n', '<s-l>', '<Cmd>BufferPrevious<CR>')
+vim.keymap.set('n', '<s-h>', '<Cmd>BufferNext<CR>')
+vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>')
 
 

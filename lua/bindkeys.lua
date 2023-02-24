@@ -23,8 +23,18 @@ keymap("n", "<C-k>", ":resize -3<CR>")
 keymap('n', '<leader>cw', [[:let @/='\<'.expand('<cword>').'\>'<cr>"_ciw]], { noremap = true })
 
 -- Auto-indent and save on Ctrl+s
-keymap('n', '<C-s>', ':w<CR>gg=G')
-keymap('n', '<leader>s', ':w<CR>gg=G')
+keymap('n', '<C-s>', ':w<CR>')
+keymap('n', '<leader>s', ':w<CR>')
 
 keymap("n", "<C-a>", "ggVG")
 keymap("n", "<leader>a", "ggVG")
+
+function formatCode()
+    local current_atual = vim.api.nvim_win_get_cursor(0)
+    vim.api.nvim_feedkeys('gg=G<c-o>', 'n', true)
+    vim.api.nvim_win_set_cursor(0, current_atual)
+    print(current_atual)
+end
+
+vim.api.nvim_command('autocmd BufWritePost * lua formatCode()')
+
