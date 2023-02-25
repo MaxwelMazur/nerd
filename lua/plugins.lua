@@ -32,7 +32,10 @@ local plugins = {
     {"nvim-tree/nvim-web-devicons"}, -- dependencia neo-tree
     {"akinsho/toggleterm.nvim"},
     {"lukas-reineke/indent-blankline.nvim"},
+
+    -- themes
     {"catppuccin/nvim"},
+    {"navarasu/onedark.nvim"},
 }
 
 return plugins
