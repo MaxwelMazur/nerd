@@ -7,6 +7,11 @@ bufferline.setup {
     animation = false,
     auto_hide = false,
     closable = true,
+    icon_separator_active = '',
+    icon_separator_inactive = '',
+    icon_close_tab = '',
+    icon_close_tab_modified = '●',
+    icon_pinned = '車',
 }
 
 vim.api.nvim_create_autocmd('BufWinEnter', {
@@ -25,8 +30,8 @@ vim.api.nvim_create_autocmd({'BufWinLeave', 'BufWipeout'}, {
     end
 })
 
-vim.keymap.set('n', '<s-l>', '<Cmd>BufferPrevious<CR>')
-vim.keymap.set('n', '<s-h>', '<Cmd>BufferNext<CR>')
-vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>')
+vim.keymap.set('n', '<s-h>', '<Cmd>BufferPrevious<CR>')
+vim.keymap.set('n', '<s-l>', '<Cmd>BufferNext<CR>')
+vim.keymap.set('n', '<s-j>', '<Cmd>BufferClose<CR>')
 
 
