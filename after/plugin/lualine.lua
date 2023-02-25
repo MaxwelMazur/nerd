@@ -63,6 +63,24 @@ local config = {
     },
 }
 
+local function fileInfo()
+    local icon = "  "
+    local filename = (vim.fn.expand "%" == "" and "Empty ") or vim.fn.expand "%:t"
+
+    if filename ~= "Empty " then
+        local devicons_present, devicons = pcall(require, "nvim-web-devicons")
+
+        if devicons_present then
+            local ft_icon = devicons.get_icon(filename)
+            icon = (ft_icon ~= nil and " " .. ft_icon) or ""
+        end
+
+        filename = " " .. filename .. " "
+    end
+
+    return icon .. filename
+end
+
 local function ins_left(component)
     table.insert(config.sections.lualine_c, component)
 end
@@ -117,7 +135,7 @@ ins_left {
 }
 
 ins_left {
-    'filename', cond = conditions.buffer_not_empty, color = { fg = colors.magenta, gui = 'bold' },
+    fileInfo(), cond = conditions.buffer_not_empty, color = { fg = colors.magenta, gui = 'bold' },
 }
 
 ins_left {
@@ -193,8 +211,6 @@ ins_right {
     padding = { left = 1 },
 }
 
-
 -- Now don't forget to initialize lualine
 lualine.setup(config)
-vim.cmd([[ set laststatus=3 ]])
-
+vim.opt.laststatus = 3
