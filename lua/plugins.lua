@@ -26,11 +26,7 @@ local plugins = {
     {"lewis6991/gitsigns.nvim"},
     {"andweeb/presence.nvim"},
     {"RRethy/vim-illuminate"},
-    {"romgrk/barbar.nvim"},
-    {"nvim-lualine/lualine.nvim"},
-    {"nvim-tree/nvim-tree.lua"},
-    {"nvim-tree/nvim-web-devicons"}, -- dependencia neo-tree
-    {"akinsho/toggleterm.nvim"},
+    {"nvim-tree/nvim-web-devicons"},
     {"lukas-reineke/indent-blankline.nvim"},
 
     -- themes

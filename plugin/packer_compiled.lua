@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -134,11 +129,6 @@ _G.packer_plugins = {
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -169,11 +159,6 @@ _G.packer_plugins = {
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/nvim-tree/nvim-tree.lua"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -203,11 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "/home/maxwelbm/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-illuminate"] = {
     loaded = true,

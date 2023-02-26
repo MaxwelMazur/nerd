@@ -25,6 +25,9 @@ keymap('n', '<leader>cw', [[:let @/='\<'.expand('<cword>').'\>'<cr>"_ciw]], { no
 -- Auto-indent and save on Ctrl+s
 keymap('n', '<C-s>', ':w<CR>gg=G')
 keymap('n', '<leader>s', ':w<CR>gg=G')
+keymap('n', '<leader>f', 'gg=G<c-o>')
 
 keymap("n", "<C-a>", "ggVG")
 keymap("n", "<leader>a", "ggVG")
+
+keymap('n', '<leader>oe', ':Ex<CR>', { noremap = true })
