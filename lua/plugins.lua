@@ -32,6 +32,7 @@ local plugins = {
     -- themes
     {"catppuccin/nvim"},
     {"navarasu/onedark.nvim"},
+    {"nvim-tree/nvim-tree.lua"},
 }
 
 return plugins
