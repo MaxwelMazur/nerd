@@ -22,3 +22,13 @@ opt.isfname:append("@-@")
 opt.updatetime = 50
 opt.colorcolumn = "0"
 opt.clipboard = 'unnamedplus'
+
+-- Configurações do terminal
+vim.cmd([[set splitright]]) -- Abre o terminal na vertical
+vim.cmd([[set splitbelow]]) -- Abre o terminal abaixo
+vim.cmd([[set termguicolors]]) -- Habilita cores no terminal
+vim.cmd([[set number]]) -- Habilita linhas de número no terminal
+
+-- Define um mapeamento para sair do modo terminal com <C-w>
+-- vim.cmd('tnoremap <C-w> <C-\\><C-n>')
+vim.cmd('autocmd! TermOpen * startinsert')
