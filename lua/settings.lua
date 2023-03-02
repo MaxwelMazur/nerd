@@ -30,5 +30,5 @@ vim.cmd([[set termguicolors]]) -- Habilita cores no terminal
 vim.cmd([[set number]]) -- Habilita linhas de número no terminal
 
 -- Define um mapeamento para sair do modo terminal com <C-w>
--- vim.cmd('tnoremap <C-w> <C-\\><C-n>')
+vim.cmd('tnoremap <C-w> <C-\\><C-n>')
 vim.cmd('autocmd! TermOpen * startinsert')

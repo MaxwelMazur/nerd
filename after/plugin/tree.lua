@@ -9,7 +9,7 @@ vim.opt.termguicolors = true
 
 local present, tree = pcall(require, "nvim-tree")
 if not present then
-  return
+    return
 end
 
 -- OR setup with some options
@@ -22,38 +22,6 @@ tree.setup({
             list = {
                 { key = "u", action = "dir_up" },
             },
-        },
-        -- defina o campo devicons para personalizar os ícones exibidos
-        devicons = {
-            -- defina um ícone personalizado para a extensão .md
-            default = "",
-            symlink = "",
-            git = {
-                -- defina ícones personalizados para os diferentes status do git
-                unstaged = "✚",
-                staged = "✚",
-                unmerged = "≠",
-                renamed = "≫",
-                deleted = "",
-                ignored = "◌",
-            },
-            folder = {
-                arrow_open = "",
-                arrow_closed = "",
-                default = "",
-                open = "",
-                empty = "",
-                empty_open = "",
-                symlink = "",
-                symlink_open = "",
-            },
-            lsp = {
-                hint = "",
-                info = "",
-                warning = "",
-                error = "",
-            },
-
         },
     },
     renderer = {

@@ -8,7 +8,7 @@ catppuccin.setup({
         dark = "frappe",
     },
     flavour = "frappe",
-    transparent_background = false
+    transparent_background = true
 })
 
 vim.cmd.colorscheme("catppuccin")

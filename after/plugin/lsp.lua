@@ -9,8 +9,8 @@ lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
-    'golangci_lint_ls',
-    'gopls',
+    -- 'golangci_lint_ls',
+    -- 'gopls',
 })
 
 -- Fix Undefined global 'vim'
